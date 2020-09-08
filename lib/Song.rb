@@ -48,6 +48,7 @@ class Song
 
   def self.create(name)
     self.new(name).tap do |song|
+      song.save
     end
   end
 
