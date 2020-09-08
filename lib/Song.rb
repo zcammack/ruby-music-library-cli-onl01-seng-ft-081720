@@ -15,7 +15,8 @@ class Song
   end
 
   def save
-    @@all << self unless @@all.include? self
+    @@all << self
+    # unless @@all.include? self
   end
 
   def self.destroy_all
@@ -64,6 +65,7 @@ class Song
     .chomp(".mp3")
     song = self.find_or_create_by_name(song_name)
     song.artist = Artist.find_or_create_by_name(artist_name)
+    binding.pry
     song.genre = Genre.find_or_create_by_name(genre_name)
     song
   end
