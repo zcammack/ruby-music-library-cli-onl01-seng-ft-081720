@@ -69,6 +69,7 @@ class Song
   end
 
   def self.create_from_filename(file)
+    binding pry
     self.new_from_filename(file).save
   end
 end
