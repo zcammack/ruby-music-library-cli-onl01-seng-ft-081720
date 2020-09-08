@@ -63,7 +63,7 @@ class Song
     artist_name = name.split(" - ")[0]
     genre_name = name.split(" - ")[2]
     .chomp(".mp3")
-    song = self.find_or_create_by_name(song_name)
+    song = Song.new(song_name)
     song.artist = Artist.find_or_create_by_name(artist_name)
     binding.pry
     song.genre = Genre.find_or_create_by_name(genre_name)
