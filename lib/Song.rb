@@ -15,7 +15,7 @@ class Song
   end
 
   def save
-    @@all << self
+    @@all << self.include?
   end
 
   def self.destroy_all
